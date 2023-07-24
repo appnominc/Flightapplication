@@ -1,0 +1,18 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+LoginandNavigateURL
+    Open Browser    https://ngendigital.com/demo-application    Chrome
+
+ObjectsonwebPage
+    Element Text Should Be    xpath://div[@class='box']//h1    My Account
+    Page Should Contain Textfield    xpath://input[@type='email']    email
+    Page Should Contain Textfield    xpath://input[@type='password']    passwd
+    Page Should Contain Element    xapth:/html/body/form/div/a[1]/div
+    Page Should Contain Element    xpath://div[@id='btn2']
+    Page Should Contain    xpath://u[contains(text(),'Click Here!')]
+    Page Should Contain    xapth://p[contains(text(), 'Forgot your password?')]
+
+changeto iframe
+    Select Frame    id=iframe-05

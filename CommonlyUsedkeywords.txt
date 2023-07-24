@@ -1,0 +1,13 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Variables ***
+${username}       \
+${password}       \
+
+*** Keywords ***
+LoginToFlightApplication
+    [Arguments]    ${username}    ${password}
+    Input Text    xpath://input[@type='email']    ${username}
+    Input Text    xpath://input[@type='password']    ${password}
+    Click Element    xpath://div[@class='btn']

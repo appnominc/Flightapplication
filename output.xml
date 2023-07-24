@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.8.10 on win32)" generated="20230705 21:43:31.377" rpa="false" schemaversion="4">
+<suite id="s1" name="TestSuite" source="C:\Users\deepika.ns\RobotProjects\DemoProject\TestSuite.robot">
+<test id="s1-t1" name="TC01" line="17">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${var1}</arg>
+<arg>${var2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230705 21:43:31.431" endtime="20230705 21:43:31.431"/>
+</kw>
+<status status="PASS" starttime="20230705 21:43:31.430" endtime="20230705 21:43:31.431"/>
+</test>
+<test id="s1-t2" name="TC02" line="20">
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>@ {USER} [0]</arg>
+<arg>@ {USER} [1]</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20230705 21:43:31.431" endtime="20230705 21:43:31.431"/>
+</kw>
+<status status="PASS" starttime="20230705 21:43:31.431" endtime="20230705 21:43:31.431"/>
+</test>
+<test id="s1-t3" name="TC03" line="23">
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>&amp; {Credentials} [username]</arg>
+<arg>&amp; {Credentials} [password]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20230705 21:43:31.431" level="FAIL">&amp; {Credentials} [username] != &amp; {Credentials} [password]</msg>
+<status status="FAIL" starttime="20230705 21:43:31.431" endtime="20230705 21:43:31.431"/>
+</kw>
+<status status="FAIL" starttime="20230705 21:43:31.431" endtime="20230705 21:43:31.431">&amp; {Credentials} [username] != &amp; {Credentials} [password]</status>
+</test>
+<test id="s1-t4" name="TC04" line="26">
+<kw name="Should Be True" library="BuiltIn">
+<arg>4</arg>
+<arg>4</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20230705 21:43:31.438" endtime="20230705 21:43:31.438"/>
+</kw>
+<status status="PASS" starttime="20230705 21:43:31.438" endtime="20230705 21:43:31.438"/>
+</test>
+<status status="FAIL" starttime="20230705 21:43:31.382" endtime="20230705 21:43:31.438"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
